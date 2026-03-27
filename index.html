@@ -1,13 +1,587 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Kinoki Detox Bouake | Commande WhatsApp</title>
+    <meta
+      name="description"
+      content="Commandez vos patchs Kinoki Detox depuis Bouake. Formule simple en 5 jours pour le sommeil, le stress et le confort au quotidien. Validation rapide sur WhatsApp."
+    />
+    <meta name="theme-color" content="#22c55e" />
+    <link rel="icon" type="image/png" href="./k6.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#22c55e",
+              pearl: "#f3f4f6",
+              ink: "#0f172a"
+            },
+            boxShadow: {
+              soft: "0 20px 60px rgba(34, 197, 94, 0.14)"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float-soft {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 12px 30px rgba(34, 197, 94, 0.18);
+        }
+
+        50% {
+          box-shadow: 0 18px 45px rgba(34, 197, 94, 0.3);
+        }
+      }
+
+      .animate-fade-up {
+        animation: fade-up 0.8s ease forwards;
+      }
+
+      .animate-fade-up-delay {
+        opacity: 0;
+        animation: fade-up 0.8s ease 0.18s forwards;
+      }
+
+      .animate-fade-up-delay-2 {
+        opacity: 0;
+        animation: fade-up 0.8s ease 0.32s forwards;
+      }
+
+      .animate-float-soft {
+        animation: float-soft 4.8s ease-in-out infinite;
+      }
+
+      .animate-pulse-glow {
+        animation: pulse-glow 2.8s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .animate-fade-up,
+        .animate-fade-up-delay,
+        .animate-fade-up-delay-2,
+        .animate-float-soft,
+        .animate-pulse-glow {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-pearl text-slate-900 antialiased">
+    <div class="min-h-screen">
+      <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+          <a href="#top" class="flex items-center gap-3">
+            <span class="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full ring-2 ring-green-100">
+              <img
+                src="./k5.jpg"
+                alt="Kinoki Detox"
+                loading="eager"
+                class="h-full w-full object-cover"
+              />
+            </span>
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Kinoki Detox</p>
+              <p class="text-xs text-slate-500">Boutique a Bouake</p>
+            </div>
+          </a>
+          <a
+            href="#commande"
+            class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-green-600"
+          >
+            Commander
+          </a>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="relative overflow-hidden bg-white">
+          <div class="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-green-50 to-white"></div>
+          <div class="relative mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-20 lg:pt-16">
+            <div class="max-w-2xl">
+              <div class="animate-fade-up mb-5 inline-flex items-center gap-2 rounded-full bg-green-50 px-4 py-2 text-sm font-semibold text-green-700">
+                <span class="inline-block h-2.5 w-2.5 rounded-full bg-brand"></span>
+                Stock limite a Bouake
+              </div>
+              <h1 class="animate-fade-up-delay max-w-xl text-4xl font-black leading-tight tracking-tight text-ink sm:text-5xl">
+                Retrouver des nuits plus calmes avec les patchs Kinoki Detox.
+              </h1>
+              <p class="animate-fade-up-delay-2 mt-5 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+                Une cure simple de 5 jours pour accompagner l'elimination des toxines, aider a reduire le stress, ameliorer le sommeil et soulager les douleurs du quotidien.
+              </p>
+
+              <div class="animate-fade-up-delay-2 mt-7 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-3xl border border-green-100 bg-green-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-green-700">Format</p>
+                  <p class="mt-2 text-lg font-bold text-ink">Boite de 10 patchs</p>
+                  <p class="mt-1 text-sm text-slate-600">1 cure complete sur 5 jours</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-4">
+                  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Disponibilite</p>
+                  <p class="mt-2 text-lg font-bold text-ink">Retrait ou expedition</p>
+                  <p class="mt-1 text-sm text-slate-600">Expedition a la charge du client</p>
+                </div>
+              </div>
+
+              <div class="animate-fade-up-delay-2 mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="#commande"
+                  class="animate-pulse-glow inline-flex items-center justify-center rounded-2xl bg-brand px-6 py-4 text-base font-bold text-white shadow-soft transition hover:bg-green-600"
+                >
+                  Commander maintenant
+                </a>
+                <a
+                  href="https://vm.tiktok.com/ZMAnDNQvK/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-900 transition hover:border-brand hover:text-brand"
+                >
+                  🎥 Voir le guide d'utilisation (Video)
+                </a>
+              </div>
+
+              <div class="animate-fade-up-delay-2 mt-8 grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
+                <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                  <p class="font-semibold text-slate-900">Bouake</p>
+                  <p class="mt-1">Livraison locale organisee depuis la boutique.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-4">
+                  <p class="font-semibold text-slate-900">Autres villes</p>
+                  <p class="mt-1">Expedition possible, frais de transport a la charge du client.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="animate-float-soft relative">
+              <div class="absolute -right-3 top-4 rounded-2xl bg-red-500 px-4 py-2 text-sm font-bold text-white shadow-lg sm:right-0">
+                Stock limite a Bouake
+              </div>
+              <div class="overflow-hidden rounded-[2rem] bg-slate-950 p-5 shadow-soft">
+                <div class="rounded-[1.5rem] bg-gradient-to-br from-green-200 via-white to-green-50 p-6">
+                  <div class="rounded-[1.5rem] bg-white p-6 shadow-lg">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Kinoki Detox</p>
+                        <h2 class="mt-2 text-2xl font-black text-ink">Patchs detox pour les pieds</h2>
+                      </div>
+                      <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">5 jours</span>
+                    </div>
+                    <div
+                      id="heroProductImage"
+                      class="mt-6 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-[1.5rem] border border-dashed border-slate-300 bg-pearl p-6 text-center"
+                    >
+                      <div>
+                        <p class="text-sm font-semibold text-slate-900">Ajoutez une photo principale du produit</p>
+                        <p class="mt-2 text-sm leading-6 text-slate-500">
+                          Deposez une image dans <span class="font-semibold">images/kinoki-boite-1.jpg</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="mt-6 grid gap-3">
+                      <div class="rounded-2xl bg-pearl p-4">
+                        <p class="text-sm font-semibold text-slate-900">Bien-etre au reveil</p>
+                        <p class="mt-1 text-sm text-slate-600">Concu pour accompagner votre routine du soir, sans complication.</p>
+                      </div>
+                      <div class="rounded-2xl bg-pearl p-4">
+                        <p class="text-sm font-semibold text-slate-900">Utilisation simple</p>
+                        <p class="mt-1 text-sm text-slate-600">A poser sous les pieds avant de dormir, puis a retirer au reveil.</p>
+                      </div>
+                      <div class="rounded-2xl bg-pearl p-4">
+                        <p class="text-sm font-semibold text-slate-900">Commande rapide</p>
+                        <p class="mt-1 text-sm text-slate-600">Remplissez le formulaire et finalisez directement sur WhatsApp.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">01</p>
+              <h3 class="mt-3 text-lg font-bold text-ink">Elimination des toxines</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Une utilisation pendant le sommeil pour accompagner une sensation de purification au reveil.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">02</p>
+              <h3 class="mt-3 text-lg font-bold text-ink">Reduction du stress</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">S'integre facilement dans une routine du soir plus apaisante et reguliere.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">03</p>
+              <h3 class="mt-3 text-lg font-bold text-ink">Amelioration du sommeil</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Ideal pour ceux qui veulent retrouver des nuits plus sereines et un reveil plus leger.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">04</p>
+              <h3 class="mt-3 text-lg font-bold text-ink">Soulagement des douleurs</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">Une option bien-etre appreciee pour aider a detendre le corps apres la journee.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12">
+          <div class="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">Galerie produit</p>
+                <h2 class="mt-2 text-3xl font-black text-ink">Montrez le produit pour rassurer avant la commande</h2>
+              </div>
+              <p class="max-w-md text-sm leading-6 text-slate-500">
+                Ajoutez vos vraies photos pour augmenter la confiance et améliorer les conversions sur mobile.
+              </p>
+            </div>
+
+            <div id="productGallery" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+          </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12">
+          <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="rounded-[2rem] bg-slate-900 p-8 text-white shadow-lg">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-300">Comment ca marche ?</p>
+              <h2 class="mt-4 text-3xl font-black leading-tight">Regardez le guide video avant de commander.</h2>
+              <p class="mt-4 text-sm leading-7 text-slate-300">
+                Le guide montre comment poser les patchs, a quel moment les utiliser et comment integrer la cure dans votre routine du soir.
+              </p>
+              <a
+                href="https://vm.tiktok.com/ZMAnDNQvK/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center justify-center rounded-2xl bg-white px-5 py-4 text-base font-bold text-slate-900 transition hover:bg-brand hover:text-white"
+              >
+                🎥 Voir le guide d'utilisation (Video)
+              </a>
+            </div>
+
+            <div class="rounded-[2rem] border border-green-100 bg-gradient-to-br from-green-50 via-white to-white p-8 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-2xl text-white">▶</div>
+                <div>
+                  <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">Carte video</p>
+                  <h3 class="mt-2 text-2xl font-black text-ink">Tutoriel TikTok en 1 clic</h3>
+                  <p class="mt-3 max-w-xl text-sm leading-7 text-slate-600">
+                    Cliquez sur le bouton pour voir la demonstration et comprendre comment utiliser correctement les patchs Kinoki avant validation de votre commande.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6 grid gap-3 sm:grid-cols-3">
+                <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
+                  <p class="text-sm font-semibold text-slate-900">Etape 1</p>
+                  <p class="mt-1 text-sm text-slate-600">Poser les patchs sous les pieds avant de dormir.</p>
+                </div>
+                <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
+                  <p class="text-sm font-semibold text-slate-900">Etape 2</p>
+                  <p class="mt-1 text-sm text-slate-600">Laisser agir toute la nuit sans contrainte.</p>
+                </div>
+                <div class="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
+                  <p class="text-sm font-semibold text-slate-900">Etape 3</p>
+                  <p class="mt-1 text-sm text-slate-600">Retirer au reveil et poursuivre la cure 5 jours.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="commande" class="mx-auto max-w-6xl px-4 pb-28 sm:px-6">
+          <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div class="space-y-5">
+              <div class="rounded-[2rem] bg-white p-7 shadow-sm ring-1 ring-slate-200">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Commande rapide</p>
+                <h2 class="mt-4 text-3xl font-black text-ink">Validation directe sur WhatsApp</h2>
+                <p class="mt-4 text-sm leading-7 text-slate-600">
+                  Remplissez vos informations, puis cliquez sur le bouton de validation. Votre message sera prepare automatiquement pour l'envoi au vendeur.
+                </p>
+              </div>
+              <div class="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 class="text-lg font-bold text-ink">Informations utiles</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-600">
+                  <li>Produit disponible a la boutique a Bouake.</li>
+                  <li>Livraison ou expedition selon votre ville.</li>
+                  <li>Les frais d'expedition sont a la charge du client.</li>
+                  <li>Le vendeur vous confirme le montant total avant finalisation.</li>
+                </ul>
+              </div>
+              <div class="rounded-[2rem] border border-red-100 bg-red-50 p-7">
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-red-600">Urgence legere</p>
+                <p class="mt-3 text-base font-semibold text-slate-900">
+                  Stock limite a Bouake. Les commandes sont traitees selon disponibilite.
+                </p>
+              </div>
+            </div>
+
+            <div class="rounded-[2rem] bg-white p-6 shadow-soft ring-1 ring-slate-200 sm:p-8">
+              <form id="orderForm" class="space-y-5">
+                <div>
+                  <label for="fullName" class="mb-2 block text-sm font-semibold text-slate-700">Nom complet</label>
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    required
+                    placeholder="Ex: Jean Kouassi"
+                    class="w-full rounded-2xl border border-slate-200 bg-pearl px-4 py-4 text-base outline-none transition focus:border-brand focus:bg-white"
+                  />
+                </div>
+
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label for="city" class="mb-2 block text-sm font-semibold text-slate-700">Ville</label>
+                    <select
+                      id="city"
+                      name="city"
+                      class="w-full rounded-2xl border border-slate-200 bg-pearl px-4 py-4 text-base outline-none transition focus:border-brand focus:bg-white"
+                    >
+                      <option value="Bouake">Bouake</option>
+                      <option value="Abidjan">Abidjan</option>
+                      <option value="Yamoussoukro">Yamoussoukro</option>
+                      <option value="Korhogo">Korhogo</option>
+                      <option value="San Pedro">San Pedro</option>
+                      <option value="Daloa">Daloa</option>
+                      <option value="Autre ville">Autre ville</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="quantity" class="mb-2 block text-sm font-semibold text-slate-700">Quantite de boites</label>
+                    <select
+                      id="quantity"
+                      name="quantity"
+                      class="w-full rounded-2xl border border-slate-200 bg-pearl px-4 py-4 text-base outline-none transition focus:border-brand focus:bg-white"
+                    >
+                      <option value="1">1 boite</option>
+                      <option value="2">2 boites</option>
+                      <option value="3">3 boites</option>
+                      <option value="5">5 boites</option>
+                      <option value="10">10 boites</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="neighborhood" class="mb-2 block text-sm font-semibold text-slate-700">Quartier precis</label>
+                  <input
+                    id="neighborhood"
+                    name="neighborhood"
+                    type="text"
+                    required
+                    placeholder="Ex: Commerce, Air France, Kennedy"
+                    class="w-full rounded-2xl border border-slate-200 bg-pearl px-4 py-4 text-base outline-none transition focus:border-brand focus:bg-white"
+                  />
+                </div>
+
+                <div class="rounded-2xl bg-green-50 p-4 text-sm leading-6 text-green-800">
+                  Votre demande sera envoyee vers WhatsApp avec toutes les informations necessaires pour confirmer le montant total et l'expedition depuis Bouake.
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full rounded-2xl bg-brand px-5 py-4 text-base font-black text-white shadow-soft transition hover:bg-green-600"
+                >
+                  Valider ma commande
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-sm text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between">
+          <p>Kinoki Detox Bouake, Cote d'Ivoire.</p>
+          <p>Livraison locale et expedition selon disponibilite.</p>
+        </div>
+      </footer>
+
+      <div class="fixed inset-x-0 bottom-0 z-50 border-t border-green-200 bg-white/95 px-4 py-3 shadow-[0_-10px_30px_rgba(15,23,42,0.08)] backdrop-blur md:hidden">
+        <a
+          href="#commande"
+          class="block rounded-2xl bg-brand px-5 py-4 text-center text-base font-black text-white transition hover:bg-green-600"
+        >
+          Commander sur WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("orderForm");
+      const productGallery = document.getElementById("productGallery");
+      const heroProductImage = document.getElementById("heroProductImage");
+      const productImages = [
+        
+        {
+          src: "./k2.jpg",
+          alt: "Presentation de la boite Kinoki Detox",
+          source: "https://www.pinterest.com/pin/583779170467528001/"
+        },
+        {
+          src: "./k3.jpg",
+          alt: "Detail des patchs Kinoki Detox",
+          source: "https://www.pinterest.com/pin/4606619550622932480/"
+        },
+        {
+          src: "./k4.jpg",
+          alt: "Vue supplementaire des patchs Kinoki Detox",
+          source: "https://www.pinterest.com/pin/4606619550622932480/"
+        }
+      ];
+
+      function createImageCard(image) {
+        const article = document.createElement("article");
+        article.className =
+          "animate-fade-up overflow-hidden rounded-[1.5rem] bg-white shadow-sm ring-1 ring-slate-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl";
+
+        const img = document.createElement("img");
+        img.src = image.src;
+        img.alt = image.alt;
+        img.loading = "lazy";
+        img.className = "h-72 w-full object-cover";
+
+        article.appendChild(img);
+        return article;
+      }
+
+      function createFallbackCard(image, index) {
+        const article = document.createElement("article");
+        article.className =
+          "animate-fade-up flex min-h-[260px] flex-col justify-between rounded-[1.5rem] border border-dashed border-slate-300 bg-pearl p-6";
+
+        const content = document.createElement("div");
+        content.innerHTML =
+          '<p class="text-base font-semibold text-slate-900">Photo produit ' +
+          (index + 1) +
+          "</p>" +
+          '<p class="mt-2 text-sm leading-6 text-slate-500">Source de reference disponible sur Pinterest.</p>' +
+          '<p class="mt-3 text-sm leading-6 text-slate-500">Pour afficher la vraie image ici, ajoutez le fichier local <span class="font-semibold">' +
+          image.src.replace("./", "") +
+          "</span>.</p>";
+
+        const link = document.createElement("a");
+        link.href = image.source;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.className =
+          "mt-6 inline-flex items-center justify-center rounded-2xl bg-white px-4 py-3 text-sm font-bold text-slate-900 ring-1 ring-slate-200 transition hover:bg-brand hover:text-white";
+        link.textContent = "Voir la reference Pinterest";
+
+        article.appendChild(content);
+        article.appendChild(link);
+        return article;
+      }
+
+      function loadProductImages() {
+        const loaders = productImages.map(function (image) {
+          return new Promise(function (resolve) {
+            const testImage = new Image();
+            testImage.onload = function () {
+              resolve(image);
+            };
+            testImage.onerror = function () {
+              resolve({ missing: true, ...image });
+            };
+            testImage.src = image.src;
+          });
+        });
+
+        Promise.all(loaders).then(function (images) {
+          productGallery.innerHTML = "";
+
+          images.forEach(function (image, index) {
+            if (image.missing) {
+              productGallery.appendChild(createFallbackCard(image, index));
+              return;
+            }
+
+            productGallery.appendChild(createImageCard(image));
+          });
+
+          const availableImages = images.filter(function (image) {
+            return image && !image.missing;
+          });
+
+          if (!availableImages.length) {
+            return;
+          }
+
+          const heroImage = document.createElement("img");
+          heroImage.src = availableImages[0].src;
+          heroImage.alt = availableImages[0].alt;
+          heroImage.loading = "eager";
+          heroImage.className = "h-full w-full rounded-[1.25rem] object-cover";
+
+          heroProductImage.innerHTML = "";
+          heroProductImage.className =
+            "mt-6 overflow-hidden rounded-[1.5rem] bg-pearl";
+          heroProductImage.appendChild(heroImage);
+        });
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById("fullName").value.trim();
+        const city = document.getElementById("city").value.trim();
+        const neighborhood = document.getElementById("neighborhood").value.trim();
+        const quantity = document.getElementById("quantity").value.trim();
+
+        if (!fullName || !city || !neighborhood || !quantity) {
+          return;
+        }
+
+        const message =
+          "Bonjour ! Je souhaite commander " +
+          quantity +
+          " boite(s) de Kinoki Detox. 📍 Livraison a : " +
+          city +
+          " / " +
+          neighborhood +
+          ". 👤 Client : " +
+          fullName +
+          ". Merci de me confirmer le montant total avec l'expedition depuis Bouake.";
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl =
+          "https://wa.me/2250709905419?text=" + encodedMessage;
+
+        window.open(whatsappUrl, "_blank", "noopener");
+      });
+
+      loadProductImages();
+    </script>
   </body>
 </html>
-
